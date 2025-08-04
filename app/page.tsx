@@ -45,7 +45,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://erzionshade.com/Shade-logo.png", // REMINDER: Replace with your actual, high-quality OG image URL
+        url: "https://erzionshade.vercel.app/Shade-logo.png", // REMINDER: Replace with your actual, high-quality OG image URL
         width: 1200,
         height: 630,
         alt: "Erzion Shade - Business Leak Detection & Scaling Strategy", // More descriptive alt text
