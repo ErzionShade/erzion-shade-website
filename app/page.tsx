@@ -31,7 +31,7 @@ export const metadata = {
   ],
   
   // Authors & Creator: Keep as is, clear and consistent
-  authors: [{ name: "Erzion Shade", url: "https://erzionshade.com" }],
+  authors: [{ name: "Erzion Shade", url: "https://erzionshade.vercel.app" }],
   creator: "Erzion Shade",
   
   // Open Graph (for social sharing): Optimized for click-through on platforms like Facebook/LinkedIn
@@ -39,7 +39,7 @@ export const metadata = {
     title: "Erzion Shade: Pinpoint Business Leaks. Engineer Your Empire.", // Punchier title for social
     description:
       "Unlock rapid growth. Erzion Shade helps entrepreneurs find and fix hidden business leaks, building systems that scale. Your path to silent market dominance starts here.", // More compelling description
-    url: "https://erzionshade.com",
+    url: "https://erzionshade.vercel.app",
     siteName: "Erzion Shade", // Full site name for clarity
     locale: "en_US",
     type: "website",
@@ -60,11 +60,11 @@ export const metadata = {
     description:
       "Stop guessing. Erzion Shade pinpoints hidden business leaks, unlocking rapid profit and growth. Follow the climb to silent market dominance.", // Compelling & includes your call to action
     creator: "@erzionshade", // Ensure this is your actual X handle
-    images: ["https://erzionshade.com/Shade-logo.png"], // REMINDER: Replace with actual image
+    images: ["https://erzionshade.vercel.app/Shade-logo.png"], // REMINDER: Replace with actual image
   },
   
   // Base URL: Essential for relative paths in metadata
-  metadataBase: new URL("https://erzionshade.com"),
+  metadataBase: new URL("https://erzionshade.vercel.app"),
   
   // Favicon: Standard
   icons: {
