@@ -1,0 +1,536 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+}
+.shine-text {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+}
+
+.shine-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shine 2.5s infinite;
+}
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 10s ease-in-out infinite;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* styles/globals.css */
+body {
+  background-color: black; /* Prevent default white/blue flash */
+}
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+  }
+  50% {
+    text-shadow: 0 0 20px #00fff7, 0 0 40px #00fff7, 0 0 60px #00fff7;
+  }
+}
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* === CUSTOM GLITCH TEXT === */
+.glitch-text {
+  position: relative;
+  color: white;
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red, -2px 0 blue; }
+  25% { text-shadow: -2px 0 red, 2px 0 blue; }
+  50% { text-shadow: 2px 2px red, -2px -2px blue; }
+  75% { text-shadow: -2px 2px red, 2px -2px blue; }
+  100% { text-shadow: 2px 0 red, -2px 0 blue; }
+}
+
+/* === BROKEN GLASS EFFECT === */
+.broken-glass {
+  background-image: url('/broken-glass.png');
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: screen;
+}
+
+/* === LIGHTNING FLASH === */
+.animate-lightning {
+  animation: flash 6s infinite ease-in-out;
+}
+
+@keyframes flash {
+  0%, 95%, 100% { opacity: 0; }
+  96%, 97% { opacity: 0.4; }
+  98% { opacity: 0.8; }
+  99% { opacity: 0.2; }
+}
+/* Already included glitch-text, broken-glass, flash */
+/* Now add animation for box pop-up */
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-pop-up {
+  animation: popUp 0.8s ease-out forwards;
+  }
+
+@layer utilities {
+  .animate-lowWave {
+    animation: wave 8s ease-in-out infinite alternate;
+  }
+  @keyframes wave {
+    0% {
+      transform: translateY(0) scale(1.05);
+    }
+    100% {
+      transform: translateY(-30px) scale(1.1);
+    }
+  }
+
+  .animate-flicker {
+    animation: flicker 3s infinite;
+  }
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+    }
+    20%, 24%, 55% {
+      opacity: 0.3;
+    }
+  }
+
+  .animate-holoShine {
+    animation: holo 4s ease-in-out infinite;
+  }
+  @keyframes holo {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+@keyframes holoShine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.animate-holoShine {
+  background-size: 400%;
+  animation: holoShine 6s linear infinite;
+}
+/* Cyberpunk text glow */
+.text-glow {
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+}
+
+/* Scanlines overlay */
+.scanlines {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(
+      rgba(0, 240, 255, 0.03) 50%, 
+      transparent 50%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 240, 255, 0.03) 50%,
+      transparent 50%
+    );
+  background-size: 100% 2px, 2px 100%;
+  pointer-events: none;
+}
+/* 3D Card Presets */
+.transform-gpu {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Neon Glow Effects */
+.neon-glow {
+  box-shadow: 0 0 10px theme('colors.blue.400'), 
+              0 0 20px theme('colors.purple.500');
+  transition: box-shadow 0.3s ease;
+}
+
+/* Holographic Border */
+.holo-border {
+  border: 1px solid rgba(0, 240, 255, 0.5);
+  box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.3),
+              0 0 20px rgba(0, 240, 255, 0.2);
+}
+/* Add this to your globals.css */
+.god-glow {
+  transition: box-shadow 0.4s ease;
+}
+.god-glow:hover {
+  box-shadow: 
+    0 0 15px #00ff8f,
+    0 0 30px #00ff8f,
+    0 0 60px rgba(0, 255, 143, 0.3);
+}
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+/* Add this to your global CSS or a <style> tag */
+h2 {
+  transition: background 0.5s ease;
+}
+
+/* Add to your global CSS */
+.neon-explore-button {
+  position: relative;
+  background: transparent;
+  color: #00fff7;
+  border: 2px solid #00fff7;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 247, 0.5);
+}
+
+.neon-explore-button:hover {
+  background: rgba(0, 255, 247, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.8);
+  transform: translateY(-2px);
+}
+
+.neon-explore-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    transparent 45%,
+    rgba(0, 255, 247, 0.3) 50%,
+    transparent 55%
+  );
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+}
+
+.neon-explore-button:hover::before {
+  animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+.no-flash {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+/* Add this to your globals.css */
+#showcase-main {
+  scroll-margin-top: 80px !important; /* Nuclear option */
+  scroll-snap-margin-top: 0px !important; /* Old Safari support */
+  position: relative;
+  top: -1px; /* Trick to eat up the gap */
+}
+.type-animation-wrapper {
+  contain: strict !important;
+}
+/* Add this to your global CSS */
+@media (max-width: 320px) {
+  .type-animation span {
+    transition: none !important; /* 👹 KILLS JUMPING */
+  }
+}
+/* Hide scrollbar for mobile portrait */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Safe area padding for notches */
+.safe-area-padding {
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
+}
+
+/* Text boundary protection */
+.text-boundary {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Hyphenation for small screens */
+.hyphens-auto {
+  hyphens: auto;
+}
+
+/* Minimum touch target size for better mobile UX */
+.min-touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+/* Safe area padding for notched devices */
+.safe-area-padding {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-top: max(1rem, env(safe-area-inset-top));
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+/* Text rendering improvements */
+.text-optimize {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent text size adjustment */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #444 transparent;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 3px;
+}
+@layer utilities {
+  .scrollbar-gold {
+    scrollbar-width: thin;
+    scrollbar-color: #D4AF37 transparent;
+  }
+  .scrollbar-gold::-webkit-scrollbar {
+    width: 8px;
+  }
+  .scrollbar-gold::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-gold::-webkit-scrollbar-thumb {
+    background-color: #D4AF37;
+    border-radius: 10px;
+    border: 2px solid transparent;
+  }
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
+}
+@media (max-width: 350px) {
+  .hero-badge {
+    font-size: 0.55rem !important;
+    gap: 0.5rem !important;
+  }
+}
+
+/* In your global CSS */
+@supports (padding: max(0px)) {
+  .hero-text {
+    padding-left: max(env(safe-area-inset-left), 20px);
+    padding-right: max(env(safe-area-inset-right), 20px);
+  }
+}
+
+@supports (padding: max(0px)) {
+  .hero-text {
+    padding-left: max(env(safe-area-inset-left), 16px);
+    padding-right: max(env(safe-area-inset-right), 16px);
+  }
+}
+
+.your-container::before, .your-container::after {
+  border: none !important;
+}
+
+
+.philosopher-about-container {
+  border-top: none !important;
+}
+/* KILLS ALL ROGUE BORDERS IN THE UNIVERSE */
+.philosopher-about-root, 
+.philosopher-about-root::before, 
+.philosopher-about-root::after {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+@supports (padding: max(0px)) {
+  body {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+}
+
+/* Add to your global CSS */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Fix for Safari flickering */
+.transform-3d {
+  transform: translate3d(0, 0, 0);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+
+.hover-bleed {
+  position: relative;
+}
+.hover-bleed::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #8B0000;
+  transition: width 0.3s;
+}
+.hover-bleed:hover::after {
+  width: 100%;
+}
+.dark-mode {
+  --gold: #8B0000;
+  background: radial-gradient(circle at 10% 20%, #000 0%, #1a0000 100%);
+}
+/* Emergency tiny phone fix */
+@media (max-width: 320px) {
+  .hero-headline {
+    font-size: 1.8rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.01em !important;
+  }
+}
+
+
+
+   @media (max-width: 319px) {
+    .tiny-phone-headline {
+      font-size: 1.8rem !important; /* Adjust this value to scale down */
+      transform: scale(0.9); /* Optional: Fine-tune scaling */
+      transform-origin: center;
+    }
+    .tiny-phone-headline span {
+      padding-left: 1% !important;
+      padding-right: 1% !important;
+    }
+  }
+
+  /* EXTREME FALLBACK (if needed) */
+  @media (max-width: 240px) {
+    .tiny-phone-headline {
+      font-size: 1.6rem !important;
+    }
+  }
