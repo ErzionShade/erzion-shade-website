@@ -8,11 +8,11 @@ export const metadata = {
     title: "Core Principles | Erzion Shade",
     description:
       "Explore the strategic values that empower silent creators and entrepreneurs to scale with precision.",
-    url: "https://erzionshade.com/principles",
+    url: "https://erzionshade.vercel.app/principles",
     siteName: "Erzion Shade",
     images: [
       {
-        url: "https://erzionshade.com/Shade-logo.png", 
+        url: "https://erzionshade.vercel.app/Shade-logo.png", 
         width: 1200,
         height: 630,
         alt: "Erzion Shade Core Principles - Foundation for Empire Building",
@@ -23,10 +23,10 @@ export const metadata = {
   card: "summary_large_image",
   title: "Core Principles | Erzion Shade",
   description: "Explore the strategic values empowering silent creators to build their empire.",
-  creator: "@ErzionShade",
-  image: "https://erzionshade.com/Shade-logo.png", // ← singular
+  creator: "@erzionshade",
+  image: "https://erzionshade.vercel.app/Shade-logo.png", // ← singular
 },
-  metadataBase: new URL("https://erzionshade.com"),
+  metadataBase: new URL("https://erzionshade.vercel.app"),
   icons: {
     icon: "/favicon.ico",
   },
