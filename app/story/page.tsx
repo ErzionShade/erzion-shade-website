@@ -13,7 +13,7 @@ export const metadata = {
     siteName: "Erzion Shade",
     images: [
       {
-        url: "https://erzionshade.com/Shade-logo.png", // Replace with your actual OG image URL
+        url: "https://erzionshade.vercel.app/Shade-logo.png", // Replace with your actual OG image URL
         width: 1200,
         height: 630,
         alt: "Erzion Shade - The Silent Entrepreneur Story",
@@ -26,9 +26,9 @@ export const metadata = {
     description: "Uncover the rise of Erzion Shade — the silent strategist building an empire.",
 
     creator: "@ErzionShade",
-    images: ["https://erzionshade.com/Shade-logo.png"],
+    images: ["https://erzionshade.vercel.app/Shade-logo.png"],
   },
-  metadataBase: new URL("https://erzionshade.com"),
+  metadataBase: new URL("https://erzionshade.vercel.app"),
   icons: {
     icon: "/favicon.ico",
   },
