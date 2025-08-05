@@ -8,11 +8,11 @@ export const metadata = {
     title: "Contact Erzion Shade | Silent Empire Builder",
     description:
       "Connect with Erzion Shade for personalized business growth strategies and silent market dominance.",
-    url: "https://erzionshade.com/Contact",
+    url: "https://erzionshade.vercel.app/Contact",
     siteName: "Erzion Shade",
     images: [
       {
-        url: "https://erzionshade.com/Shade-logo.png", // Replace with your OG image URL
+        url: "https://erzionshade.vercel.app/Shade-logo.png", // Replace with your OG image URL
         width: 1200,
         height: 630,
         alt: "Contact Erzion Shade - Business Growth Consultant",
@@ -25,9 +25,9 @@ export const metadata = {
     description:
       "Reach out to Erzion Shade for expert advice on business leaks and empire building.",
     creator: "@ErzionShade",
-    image: ["https://erzionshade.com/Shade-logo.png"],
+    image: ["https://erzionshade.vercel.app/Shade-logo.png"],
   },
-  metadataBase: new URL("https://erzionshade.com"),
+  metadataBase: new URL("https://erzionshade.vercel.app"),
   icons: {
     icon: "/favicon.ico",
   },
