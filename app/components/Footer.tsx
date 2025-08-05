@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="hover:text-gold-500 transition-colors">Privacy</Link>
             <Link href="/terms-and-conditions" className="hover:text-gold-500 transition-colors">Terms</Link>
-            <Link href="/contact" className="hover:text-gold-500 transition-colors">Contact</Link>
+            <Link href="/Contact" className="hover:text-gold-500 transition-colors">Contact</Link>
           </div>
           <p>© {new Date().getFullYear()} Erzion Shade. All rights reserved.</p>
         </div>
