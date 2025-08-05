@@ -31,12 +31,12 @@ export const metadata = {
     title: "Erzion Shade: Real Case Studies. Real Leak Fixes. Real Growth.",
     description:
       "See how Erzion Shade's precision strategies fix hidden business leaks and propel companies to silent market dominance. Witness the results.",
-    url: "https://erzionshade.com/case-studies",
+    url: "https://erzionshade.vercel.app/case-studies",
     siteName: "Erzion Shade",
     type: "website",
     images: [
       {
-        url: "https://erzionshade.com/Shade-logo.png", 
+        url: "https://erzionshade.vercel.app/Shade-logo.png", 
         width: 1200,
         height: 630,
         alt: "Erzion Shade Business Case Studies: Leak Fixes & Growth Results",
@@ -51,11 +51,11 @@ export const metadata = {
     description:
       "Witness the strategies that eliminate hidden business leaks and drive undeniable growth. #ErzionShade #BusinessGrowth",
     creator: "@erzionshade",
-    images: ["https://erzionshade.com/Shade-logo.png"], // Use the same OG image here
+    images: ["https://erzionshade.vercel.app/Shade-logo.png"], // Use the same OG image here
   },
 
   // Base URL: Essential for relative paths in metadata
-  metadataBase: new URL("https://erzionshade.com"),
+  metadataBase: new URL("https://erzionshade.vercel.app"),
 
   // Favicon: Standard
   icons: {
